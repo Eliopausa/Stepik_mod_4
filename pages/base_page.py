@@ -1,5 +1,6 @@
 import selenium
 import pytest
+from selenium import webdriver
 
 
 class BasePage:
@@ -8,4 +9,6 @@ class BasePage:
         self.url = url
 
     def open(self):
-        self.browser.get(self, url)
+        self.browser.get(self.url)
+
+# pytest "C:\Users\D.ryzhenkov.HORATIO\Projects\Stepik_Selenium_Python\Stepik_mod_4\base_page.py" --browser_name=chrome -v --language=en
